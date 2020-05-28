@@ -10,19 +10,20 @@ public class AddressesData {
 
     static List<String> alias = Arrays.asList("ZUS", "US", "GUS", "NIK");
 
+    static int i;
+
     public static String getRandomAlias() {
         Random randomAl = new Random();
-        int IntegerAl = randomAl.nextInt(100);
-        int randomAlias = IntegerAl % alias.size();
-        return alias.get(randomAlias);
+        int integerAl = randomAl.nextInt(100);
+        i = integerAl % alias.size();
+        return alias.get(i);
     }
 
     static String[] company = {"Zakład Ubespieczeń Społecznych", "Urząd Skarbowy", "Główny Urzad Statystyczny", "Najwyższa Izba Kontroli"};
 
     public static String getRadomCompany() {
-        int i = alias.indexOf(getRandomAlias());
         return company[i];
 
-        }
+    }
 
 }
