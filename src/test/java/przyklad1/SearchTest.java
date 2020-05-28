@@ -31,7 +31,7 @@ public class SearchTest {
         element.clear();
 
         // Wpisz informacje do wyszukania
-        element.sendKeys("Testowanie Selenium WebDriver");
+        element.sendKeys("Mistrzostwa Świata w piłce nożnej 2018");
 
         // Prześlij formularz
         element.submit();
