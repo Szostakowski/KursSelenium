@@ -20,33 +20,29 @@ public class LoginTest {
 
         System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
         driver = new ChromeDriver();
-
         driver.manage().window().maximize();
-
         driver.get("http:/prod-kurs.coderslab.pl");
     }
+
 
     // ustawienie metody, która pobiera aktualną datę i czas
     //metoda jest dodawana do adresu email przez co się nie powtarza.
 
     String DateFormat = "yyyyMMdd-HHmmss";
-
     LocalDateTime localDate = LocalDateTime.now();
-
     DateTimeFormatter formatter = DateTimeFormatter.ofPattern(DateFormat);
     String formatDateTime = localDate.format(formatter);
 
-//    List<String> names = new List
-
 
     @Test
-    public void LoginTest(){
+    public void LoginTest() {
         WebElement logIn = driver.findElement(By.xpath("//*[@id=\"_desktop_user_info\"]/div/a/span"));
         logIn.click();
 
         WebElement createAccount = driver.findElement(By.xpath("//*[@id=\"content\"]/div/a"));
         createAccount.click();
 
+        //Dane użytkownika pobieram z klasy UserData
         WebElement name = driver.findElement(By.name("firstname"));
         name.clear();
         name.sendKeys(UsersData.getRandomMaleName());
@@ -58,7 +54,7 @@ public class LoginTest {
 
         WebElement email = driver.findElement(By.name("email"));
         email.clear();
-        email.sendKeys("test+"+formatDateTime+"@test.com");
+        email.sendKeys("test+" + formatDateTime + "@test.com");
 
 
         WebElement pass = driver.findElement(By.name("password"));
@@ -80,15 +76,16 @@ public class LoginTest {
         WebElement addAddress = driver.findElement(By.xpath("//*[@id=\"address-link\"]/span/i"));
         addAddress.click();
 
+        // Dane pobieram z Klasy CompanyData
         WebElement addAlias = driver.findElement((By.name("alias")));
         addAlias.clear();
-        addAlias.sendKeys(AddressesData.getRandomAlias());
+        addAlias.sendKeys(CompanyData.getRandomAlias());
 
 
         WebElement addCompany = driver.findElement((By.name("company")));
         addCompany.clear();
-        addCompany.sendKeys(AddressesData.getRadomCompany());
-
-
+        addCompany.sendKeys(CompanyData.getRadomCompany());
     }
+
+
 }
