@@ -1,5 +1,7 @@
 Feature: Qlo hotel
 
+  // Scenario Outline: psuje test 
+
   Scenario: new account
 
     Given an open browser with qloapps.coderslab.pl/pl
