@@ -8,7 +8,7 @@ import java.util.Random;
 public class UsersData {
 
     // imiona męskie w tablicy
-    static String[] firstNamesMale = {"Jan", "Stefan", "Marek", "Jacek"};
+    static String[] firstNamesMale = {"Bilbo", "Gandalf", "Frodo", "Sauron", "Obi-Wan"};
 
     public static String getRandomMaleName() {
         Random randomMn = new Random();
@@ -19,7 +19,7 @@ public class UsersData {
 
 
     // imiona żeńskie w tablicy:
-    static String[] firstNameFemale = {"Ania", "Agnieszka", "Ewa", "Basia", "Jola"};
+    static String[] firstNameFemale = {"Leia", "Arwena", "Bójka", "Bajka", "Brawurka"};
 
     public static String getRandomFemaleName(){
         Random randomFn = new Random();
@@ -32,7 +32,7 @@ public class UsersData {
 
     // nazwiska w liście
     static List<String> surname = Arrays.asList
-            ("Jakubiak", "Stefanek", "Rakowicz", "Buczek", "Elefan");
+            ("Baggins", "Gollum", "Szary", "Kenobi", "Solo", "Skywalker");
 
     public static String getRandomSurname() {
         Random randomS = new Random();
