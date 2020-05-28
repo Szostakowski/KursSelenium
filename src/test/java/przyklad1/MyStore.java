@@ -27,7 +27,6 @@ public class MyStore {
 
     @Test
     public void myStore() {
-
         String[] products = {"mug", "white", "notebook", "cushion"};
 
         Random random = new Random();
@@ -37,9 +36,7 @@ public class MyStore {
         System.out.println(products[productNum]);
 
 
-
         WebElement wyszukiwarka = driver.findElement(By.name("s"));
-
         wyszukiwarka.clear();
         wyszukiwarka.sendKeys(products[productNum]);
         wyszukiwarka.submit();
