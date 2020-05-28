@@ -68,7 +68,7 @@ public class QlHotelSteps {
     @And("add account data: gender, first name, surname, password, date of birth, email address was added automatically")
     public void AddAccountData() {
 
-     // Losowanie liczb w celu niepowtarzalności wyboru przy kolejnych testach
+        // Losowanie liczb w celu niepowtarzalności wyboru przy kolejnych testach
 
         Random randomGender = new Random();
         int g = randomGender.nextInt(1) + 1;
@@ -76,7 +76,7 @@ public class QlHotelSteps {
         WebElement gender = driver.findElement(By.id("id_gender" + g));
         gender.click();
 
-    // imię i nazwisko pobieram z wcześniej napisanej klasy "RandomMaleName"
+        // imię i nazwisko pobieram z wcześniej napisanej klasy "RandomMaleName"
 
         WebElement firstName = driver.findElement(By.id("customer_firstname"));
         firstName.clear();
@@ -90,7 +90,7 @@ public class QlHotelSteps {
         password.clear();
         password.sendKeys("pas123");
 
-     // dla niepowtarzalności wyboru daty urodzenia zrobiłem losowanie liczb + pętle która ustala ile razy będzie
+        // dla niepowtarzalności wyboru daty urodzenia zrobiłem losowanie liczb + pętle która ustala ile razy będzie
         // wciśnięty przycisk "strzałka w dół" którym można przesuwać się po dniach/miesiącach/latach.
 
         WebElement dobDay = driver.findElement(By.id("days"));
@@ -108,7 +108,6 @@ public class QlHotelSteps {
 
         Random randomMonth = new Random();
         int m = randomDay.nextInt(12);
-
         for (int i = 0; i <= m; i++) {
             if (m == 0) m++;
             else dobMonth.sendKeys(Keys.ARROW_DOWN);
@@ -129,12 +128,11 @@ public class QlHotelSteps {
 
     // wybór newlettera dla zakończenia testu
 
-        @And("check newsletter")
-        public void newsletter() {
-            WebElement newsletter = driver.findElement(By.name("newsletter"));
-            newsletter.click();
-
-        }
-
+    @And("check newsletter")
+    public void newsletter() {
+        WebElement newsletter = driver.findElement(By.name("newsletter"));
+        newsletter.click();
     }
+
+}
 
