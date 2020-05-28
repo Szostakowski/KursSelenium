@@ -18,20 +18,15 @@ public class BingTest {
         System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
 
         driver = new ChromeDriver();
-
         driver.manage().window().maximize();
-
         driver.get("http:/www.bing.com");
-
     }
 
     @Test
     public void testBing() {
 
         WebElement element = driver.findElement(By.name("q"));
-
         element.sendKeys("Mistrzostwa Świata w piłce nożnej 2018");
-
         element.submit();
     }
 
