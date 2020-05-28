@@ -20,9 +20,7 @@ public class MyFirstTest {
         System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
 
         driver = new ChromeDriver();
-
         driver.manage().window().maximize();
-
         driver.get("https://katalon-test.s3.amazonaws.com/demo-aut/dist/html/form.html");
     }
 
@@ -91,6 +89,8 @@ public class MyFirstTest {
         WebElement comment = driver.findElement(By.id("comment"));
         comment.clear();
         comment.sendKeys("To jest mój pierwszy automat testowy.");
+
+        // Zdjęcie tego komentarza powoduje zamknięcie przeglądarki po wykonanym teście:
 
 //        WebElement submit = driver.findElement(By.id("submit"));
 //        submit.click();
