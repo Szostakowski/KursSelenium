@@ -1,6 +1,5 @@
 package cucumbertest;
 
-
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 import org.junit.runner.RunWith;
@@ -9,7 +8,5 @@ import org.junit.runner.RunWith;
 @CucumberOptions(features = "src/test/features/", plugin = {"pretty","html:out"})
 
 public class QloHotelTest {
-
-
 
 }
