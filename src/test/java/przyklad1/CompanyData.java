@@ -5,10 +5,10 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
-public class AddressesData {
+public class CompanyData {
 
 
-    static List<String> alias = Arrays.asList("ZUS", "US", "GUS", "NIK");
+    static List<String> alias = Arrays.asList("ELF", "DC", "MARVEL", "HBO");
 
     static int i;
 
@@ -19,7 +19,7 @@ public class AddressesData {
         return alias.get(i);
     }
 
-    static String[] company = {"Zakład Ubespieczeń Społecznych", "Urząd Skarbowy", "Główny Urzad Statystyczny", "Najwyższa Izba Kontroli"};
+    static String[] company = {"Elfowie sp. zo.o.", "Batmany i Supermeny S.J.", "Spider-Man S.A.", "Hobbit Bilbo Oportunista"};
 
     public static String getRadomCompany() {
         return company[i];
